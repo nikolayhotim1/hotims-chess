@@ -10,4 +10,18 @@ export class Queen extends Figure {
         this.logo = color === Colors.BLACK ? blacklogo : whitelogo;
         this.name = FigureNames.QUEEN;
     }
+
+    canMovee(target: Cell): boolean {
+        if (!super.canMovee(target)) {
+            return false;
+        } else if (
+            this.cell.isEmptyVertical(target) ||
+            this.cell.isEmptyHorizontal(target) ||
+            this.cell.isEmptyDiagonal(target)
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 };
