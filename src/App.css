@@ -50,3 +50,18 @@
     border-radius: 50%;
     background-color: blue;
 }
+
+.lost,
+.timer {
+    padding: 30px;
+    background-color: lightskyblue;
+}
+
+.lost {
+    height: calc(50vh - 60px);
+    margin-left: 50px;
+}
+
+.timer {
+    margin-right: 50px;
+}
