@@ -27,15 +27,23 @@ export class Cell {
     }
 
     moveFigure(target: Cell) {
-        if (this.figure && this.figure.canMovee(target)) {
+        if (this.figure && this.figure.canMove(target)) {
             this.figure.moveFigure(target);
             target.setFigure(this.figure);
             this.figure = null;
         }
     }
 
-    isEmpty() {
+    isEmpty(): boolean {
         return this.figure === null;
+    }
+
+    isEnemy(target: Cell): boolean {
+        if (target.figure) {
+            return this.figure?.color !== target.figure.color;
+        } else {
+            return false;
+        }
     }
 
     isEmptyVertical(target: Cell): boolean {

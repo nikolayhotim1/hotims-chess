@@ -11,8 +11,8 @@ export class Rook extends Figure {
         this.name = FigureNames.ROOK;
     }
 
-    canMovee(target: Cell): boolean {
-        if (!super.canMovee(target)) {
+    canMove(target: Cell): boolean {
+        if (!super.canMove(target)) {
             return false;
         } else if (
             this.cell.isEmptyVertical(target) ||

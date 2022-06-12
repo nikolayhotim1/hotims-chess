@@ -8,7 +8,7 @@ import { Colors } from './Colors';
 import { Cell } from './Cell';
 
 export class Board {
-    cells: Cell[][] = []
+    cells: Cell[][] = [];
 
     public initCells() {
         for (let i = 0; i < 8; i++) {
@@ -33,7 +33,7 @@ export class Board {
             const row = this.cells[i];
             for (let j = 0; j < row.length; j++) {
                 const target = row[j];
-                target.available = !!selectedCell?.figure?.canMovee(target);
+                target.available = !!selectedCell?.figure?.canMove(target);
             }
         }
     }

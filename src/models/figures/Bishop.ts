@@ -11,8 +11,8 @@ export class Bishop extends Figure {
         this.name = FigureNames.BISHOP;
     }
 
-    canMovee(target: Cell): boolean {
-        if (!super.canMovee(target)) {
+    canMove(target: Cell): boolean {
+        if (!super.canMove(target)) {
             return false;
         } else if (this.cell.isEmptyDiagonal(target)) {
             return true;

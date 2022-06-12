@@ -11,8 +11,8 @@ export class Queen extends Figure {
         this.name = FigureNames.QUEEN;
     }
 
-    canMovee(target: Cell): boolean {
-        if (!super.canMovee(target)) {
+    canMove(target: Cell): boolean {
+        if (!super.canMove(target)) {
             return false;
         } else if (
             this.cell.isEmptyVertical(target) ||
